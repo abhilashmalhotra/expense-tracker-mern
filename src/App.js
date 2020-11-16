@@ -5,10 +5,12 @@ import { Balance } from './components/Balance';
 import { Header } from './components/Header'
 import { IncomesExpences } from './components/IncomesExpences';
 import { TransactionList } from './components/TransactionList';
+import { GlobalProvider } from './context/GlobalState'
+
 
 const App = () => {
   return (
-    <React.Fragment>
+    <GlobalProvider>
       <Header />
       <div className="container">
         <Balance />
@@ -16,7 +18,7 @@ const App = () => {
         <TransactionList />
         <AddTransaction />
       </div>
-    </React.Fragment>
+    </GlobalProvider>
   )
 }
 
